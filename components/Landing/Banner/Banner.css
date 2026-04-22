@@ -1,0 +1,295 @@
+/* Banner Container */
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual Slide */
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Image Styling - Images will fit completely inside container */
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Image puri dikhegi, cut nahi hogi */
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 35px;
+  font-weight: 300;
+  padding: 18px 24px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  line-height: 1;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.nav-button.prev {
+  left: 25px;
+}
+
+.nav-button.next {
+  right: 25px;
+}
+
+/* Dots Container */
+.dots-container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  backdrop-filter: blur(5px);
+}
+
+/* Individual Dot */
+.dot {
+  height: 12px;
+  width: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.2);
+}
+
+.dot.active {
+  background: white;
+  width: 35px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
+@media (max-width: 1024px) {
+  .banner-container {
+    height: 800px;
+  }
+
+  .nav-button {
+    font-size: 30px;
+    padding: 15px 20px;
+  }
+
+  .nav-button.prev {
+    left: 20px;
+  }
+
+  .nav-button.next {
+    right: 20px;
+  }
+
+  .dots-container {
+    bottom: 25px;
+    gap: 10px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE (768px)
+   ============================================ */
+@media (max-width: 768px) {
+  .banner-container {
+    height: 400px;
+  }
+
+  .nav-button {
+    font-size: 26px;
+    padding: 12px 16px;
+  }
+
+  .nav-button.prev {
+    left: 15px;
+  }
+
+  .nav-button.next {
+    right: 15px;
+  }
+
+  .dots-container {
+    bottom: 20px;
+    gap: 8px;
+    padding: 8px 16px;
+  }
+
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  .dot.active {
+    width: 28px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - SMALL MOBILE (480px)
+   ============================================ */
+@media (max-width: 480px) {
+  .banner-container {
+    height: 300px;
+  }
+
+  .nav-button {
+    font-size: 22px;
+    padding: 10px 14px;
+    border-radius: 4px;
+  }
+
+  .nav-button.prev {
+    left: 10px;
+  }
+
+  .nav-button.next {
+    right: 10px;
+  }
+
+  .dots-container {
+    bottom: 15px;
+    gap: 6px;
+    padding: 6px 12px;
+  }
+
+  .dot {
+    height: 8px;
+    width: 8px;
+  }
+
+  .dot.active {
+    width: 24px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - EXTRA SMALL (360px)
+   ============================================ */
+@media (max-width: 360px) {
+  .banner-container {
+    height: 400px;
+  }
+
+  .nav-button {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+
+  .nav-button.prev {
+    left: 8px;
+  }
+
+  .nav-button.next {
+    right: 8px;
+  }
+
+  .dots-container {
+    bottom: 12px;
+    gap: 5px;
+    padding: 5px 10px;
+  }
+
+  .dot {
+    height: 7px;
+    width: 7px;
+  }
+
+  .dot.active {
+    width: 20px;
+  }
+}
+
+/* ============================================
+   LARGE DESKTOP OPTIMIZATION (1440px+)
+   ============================================ */
+@media (min-width: 1440px) {
+  .banner-container {
+    height: 500px;
+  }
+
+  .nav-button {
+    font-size: 40px;
+    padding: 20px 28px;
+  }
+
+  .nav-button.prev {
+    left: 40px;
+  }
+
+  .nav-button.next {
+    right: 40px;
+  }
+
+  .dots-container {
+    bottom: 40px;
+    gap: 15px;
+  }
+
+  .dot {
+    height: 14px;
+    width: 14px;
+  }
+
+  .dot.active {
+    width: 40px;
+  }
+}

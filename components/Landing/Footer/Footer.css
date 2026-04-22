@@ -1,0 +1,90 @@
+/* Footer.css - Ported from Footer.css */
+.footer {
+  background: #fff;
+  color: #222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 50px;
+}
+
+/* --- Logo Strip --- */
+.logo-strip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-strip img {
+  height: 80px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-strip img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Bottom Section --- */
+.bottom {
+  background: #171430;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 15px;
+  min-height: 100px;
+  font-weight: 200;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 12px;
+}
+
+.links a {
+  color: #f5f9fa;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  color: #80e1ff;
+  font-weight: 600;
+}
+
+.copyright-text {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+  .logo-strip img {
+    height: 45px;
+  }
+  .logo-strip {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .links a {
+    font-size: 16px;
+    gap: 20px;
+  }
+  .bottom {
+    font-size: 13px;
+    height: auto;
+  }
+}

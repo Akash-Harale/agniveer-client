@@ -1,0 +1,138 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background-color: #0d2945;
+  color: #fff;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Left Menu */
+.nav-menu {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif; /* Corrected */
+  font-weight: 300; /* Corrected - Light weight */
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Right Side */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Login Button */
+.login-btn {
+  background-color: #f4c430;
+  border: none;
+  color: #000;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Right links (Query, Analytics) */
+.right-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.right-links a {
+  color: #000000; /* Changed to black for visibility on yellow background */
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #f4c430;
+  padding: 7px 16px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.right-links a:hover {
+  background-color: #e6b800;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu a {
+    font-size: 14px;
+  }
+
+  .login-btn,
+  .right-links a {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .right-links {
+    gap: 12px;
+  }
+
+  .login-btn,
+  .right-links a {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .right-links {
+    gap: 8px;
+  }
+
+  .login-btn,
+  .right-links a {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
